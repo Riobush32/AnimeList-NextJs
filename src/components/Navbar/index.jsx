@@ -31,7 +31,7 @@ const Navbar = () => {
     <header className="navbar bg-secondary px-4 flex md:flex-row flex-col">
       <div className="flex-1">
         <Link href="/" className="font-bold text-xl text-white">
-          Anime List
+          RioNime
         </Link>
       </div>
       <div className="flex-none gap-2">

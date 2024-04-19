@@ -1,4 +1,4 @@
-import { getAnimeResponse } from "@/app/libs/api-libs";
+import { getAnimeResponse } from "@/libs/api-libs";
 import Image from "next/image";
 import VideoPlayer from "@/components/Utilities/VideoPlayer";
 
@@ -28,9 +28,11 @@ const Page = async ({ params: { id } }) => {
             <div class="card-body">
               <div class="card-actions justify-end">
                 {anime.data.genres.map((genres, index) => {
-                    return (
-                        <div className="badge badge-outline" key={index}>{genres.name}</div>
-                    )
+                  return (
+                    <div className="badge badge-outline" key={index}>
+                      {genres.name}
+                    </div>
+                  );
                 })}
               </div>
             </div>
@@ -58,14 +60,12 @@ const Page = async ({ params: { id } }) => {
                     <div className="stat-value">{anime.data.favorites}</div>
                   </div>
 
-
                   <div className="stat">
                     <div className="stat-title">Members</div>
                     <div className="stat-value">{anime.data.members}</div>
                   </div>
                 </div>
                 <p className="text-justify">{anime.data.synopsis}</p>
-
               </div>
             </div>
           </div>
